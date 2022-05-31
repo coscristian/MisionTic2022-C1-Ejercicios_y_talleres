@@ -3,7 +3,6 @@ from functools import reduce
 def ordenes(rutinaContable):
     print('------------------------ Inicio Registro diario ---------------------------------')
     for lista in rutinaContable:
-        total_factura = 0
         precio_articulo = list(map(lambda articulo: articulo[1] * articulo[2], lista[1:]))
         total_factura = reduce(lambda x,y: x+y, precio_articulo)
         if total_factura < 600000:
